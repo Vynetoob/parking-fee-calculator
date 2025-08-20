@@ -1,70 +1,91 @@
-[
-  {
-    "name": "Presidente Faria",
-    "tiers": [
-      {"duration_minutes": 30, "price": 6.00},
-      {"duration_minutes": 60, "price": 12.00},
-      {"duration_minutes": 120, "price": 15.00},
-      {"duration_minutes": 240, "price": 20.00},
-      {"duration_minutes": 720, "price": 30.00}
+{
+  "Treze de maio": {
+    "regras_minutos": [
+      {"limite": 30, "valor": 5.00},
+      {"limite": 60, "valor": 10.00},
+      {"limite": 360, "valor": 15.00},
+      {"limite": 720, "valor": 20.00}
     ],
-    "incremental_after_minutes": 720,
-    "incremental_price": 3.00,
-    "incremental_interval_minutes": 15,
-    "daily_rate": 40.00
+    "incremental_pricing": null,
+    "diaria": {
+      "valor": 40.00,
+      "ativa_apos_minutos": 720,
+      "capping_interval_minutes": 1440
+    }
   },
-  {
-    "name": "Ivo Leão",
-    "tiers": [
-      {"duration_minutes": 30, "price": 6.00},
-      {"duration_minutes": 60, "price": 12.00},
-      {"duration_minutes": 90, "price": 16.00}
+  "Presidente Faria": {
+    "regras_minutos": [
+      {"limite": 30, "valor": 6.00},
+      {"limite": 60, "valor": 12.00},
+      {"limite": 120, "valor": 15.00},
+      {"limite": 240, "valor": 20.00},
+      {"limite": 720, "valor": 30.00}
     ],
-    "incremental_after_minutes": 90,
-    "incremental_price": 3.00,
-    "incremental_interval_minutes": 15,
-    "daily_rate": 40.00
+    "incremental_pricing": {
+      "applies_after_minutes": 720,
+      "interval_minutes": 15,
+      "price_per_interval": 3.00
+    },
+    "diaria": {
+      "valor": 40.00,
+      "ativa_apos_minutos": 720,
+      "capping_interval_minutes": 1440
+    }
   },
-  {
-    "name": "Getulio Vargas",
-    "tiers": [
-      {"duration_minutes": 30, "price": 5.00},
-      {"duration_minutes": 60, "price": 10.00},
-      {"duration_minutes": 120, "price": 14.00},
-      {"duration_minutes": 240, "price": 16.00},
-      {"duration_minutes": 480, "price": 20.00}
+  "Ivo Leão": {
+    "regras_minutos": [
+      {"limite": 30, "valor": 6.00},
+      {"limite": 60, "valor": 12.00},
+      {"limite": 90, "valor": 16.00}
     ],
-    "incremental_after_minutes": 480,
-    "incremental_price": 0.75,
-    "incremental_interval_minutes": 30,
-    "daily_rate": 45.00
+    "incremental_pricing": {
+      "applies_after_minutes": 90,
+      "interval_minutes": 15,
+      "price_per_interval": 3.00
+    },
+    "diaria": {
+      "valor": 40.00,
+      "ativa_apos_minutos": null,
+      "capping_interval_minutes": 1440
+    }
   },
-  {
-    "name": "Treze de Maio",
-    "tiers": [
-      {"duration_minutes": 30, "price": 5.00},
-      {"duration_minutes": 60, "price": 10.00},
-      {"duration_minutes": 360, "price": 15.00},
-      {"duration_minutes": 720, "price": 20.00}
+  "Getulio Vargas": {
+    "regras_minutos": [
+      {"limite": 30, "valor": 5.00},
+      {"limite": 60, "valor": 10.00},
+      {"limite": 120, "valor": 14.00},
+      {"limite": 240, "valor": 16.00},
+      {"limite": 480, "valor": 20.00}
     ],
-    "incremental_after_minutes": null,
-    "incremental_price": null,
-    "incremental_interval_minutes": null,
-    "daily_rate": 40.00
+    "incremental_pricing": {
+      "applies_after_minutes": 480,
+      "interval_minutes": 30,
+      "price_per_interval": 0.75
+    },
+    "diaria": {
+      "valor": 45.00,
+      "ativa_apos_minutos": null,
+      "capping_interval_minutes": 1440
+    }
   },
-  {
-    "name": "Mateus Leme",
-    "tiers": [
-      {"duration_minutes": 30, "price": 5.00},
-      {"duration_minutes": 60, "price": 10.00},
-      {"duration_minutes": 120, "price": 12.00},
-      {"duration_minutes": 240, "price": 15.00},
-      {"duration_minutes": 480, "price": 20.00},
-      {"duration_minutes": 720, "price": 25.00}
+  "Mateus Leme": {
+    "regras_minutos": [
+      {"limite": 30, "valor": 5.00},
+      {"limite": 60, "valor": 10.00},
+      {"limite": 120, "valor": 12.00},
+      {"limite": 240, "valor": 15.00},
+      {"limite": 480, "valor": 20.00},
+      {"limite": 720, "valor": 25.00}
     ],
-    "incremental_after_minutes": 720,
-    "incremental_price": 2.50,
-    "incremental_interval_minutes": 30,
-    "daily_rate": 35.00
+    "incremental_pricing": {
+      "applies_after_minutes": 720,
+      "interval_minutes": 30,
+      "price_per_interval": 2.50
+    },
+    "diaria": {
+      "valor": 35.00,
+      "ativa_apos_minutos": null,
+      "capping_interval_minutes": 1440
+    }
   }
-]
+}
