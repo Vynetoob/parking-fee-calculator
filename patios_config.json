@@ -32,18 +32,17 @@
       "capping_interval_minutes": 1440
     }
   },
- "Ivo Leão": {
+  "Ivo Leão": {
     "regras_minutos": [
       {"limite": 30, "valor": 6.00},
       {"limite": 60, "valor": 12.00},
       {"limite": 90, "valor": 16.00}
     ],
-    "incremental_pricing": null,
-    "diaria": {
-      "valor": 40.00,
-      "ativa_apos_minutos": 720,
-      "capping_interval_minutes": 1440
-    }
+    "incremental_pricing": {
+      "applies_after_minutes": 90,
+      "interval_minutes": 15,
+      "price_per_interval": 3.00
+    },
     "diaria": {
       "valor": 40.00,
       "ativa_apos_minutos": null,
@@ -89,6 +88,4 @@
       "capping_interval_minutes": 1440
     }
   }
-
 }
-
